@@ -20,6 +20,10 @@
 
 LOCAL_PATH := device/lge/vee3
 
+# Include Vee Common
+$(call inherit-product, device/lge/vee-common/vee-common.mk)
+
+# inherit from the proprietary version
 $(call inherit-product, vendor/lge-vee/vee3/vee3-vendor.mk)
 
 # Rootdir files
