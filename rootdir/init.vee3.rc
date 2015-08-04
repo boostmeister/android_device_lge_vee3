@@ -26,3 +26,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 import init.vee.rc
+
+on fs
+    mount_all fstab.vee3
