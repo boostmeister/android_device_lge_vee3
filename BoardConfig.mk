@@ -25,6 +25,7 @@ TARGET_COMMON_VEE := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_vee3_defconfig
+BOARD_KERNEL_CMDLINE := androidboot.hardware=vee3 androidboot.selinux=permissive
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 12582912
@@ -35,7 +36,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # BT
-BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Recovery

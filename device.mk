@@ -14,13 +14,19 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to all "Vee" QCom MSM7x27a devices.
+# This file includes all definitions that apply to all L3II devices.
 #
 # Everything in this directory will become public
 
 LOCAL_PATH := device/lge/vee3
 
 $(call inherit-product, vendor/lge-vee/vee3/vee3-vendor.mk)
+
+# Rootdir files
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/lge/vee3/rootdir,root)
+
+# Config Files
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/lge/vee3/configs,system)
 
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi nodpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
