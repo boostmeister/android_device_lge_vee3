@@ -33,3 +33,4 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/lge/vee3/configs,sy
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi nodpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
 
+include device/lge/vee3/system_prop.mk
