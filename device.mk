@@ -18,8 +18,6 @@
 #
 # Everything in this directory will become public
 
-LOCAL_PATH := device/lge/vee3
-
 # Include Vee Common
 $(call inherit-product, device/lge/vee-common/vee-common.mk)
 
