@@ -40,5 +40,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/vee3/bluetooth
 DEVICE_RESOLUTION := 240x240
 
 # FSTAB
-TARGET_RECOVERY_FSTAB := device/lge/vee3/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/lge/vee3/rootdir/fstab.vee3
+#TARGET_RECOVERY_FSTAB := device/lge/vee3/recovery/recovery.fstab
 
