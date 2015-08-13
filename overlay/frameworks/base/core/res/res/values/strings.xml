@@ -19,5 +19,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Storage description for the SD card. [CHAR LIMIT=NONE] -->
+    <add-resource type="string" name="storage_sd_ext_test"></add-resource>
     <string name="storage_sd_ext_test">SD EXT - TEST</string>
 </resources>
