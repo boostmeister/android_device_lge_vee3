@@ -42,34 +42,22 @@ case "$deviceset" in
 	"E425") busybox sed -i '/ro.product.model=L3 II/c\ro.product.model=E425 (L3 II Single)' system/build.prop ;;
 	"E430") busybox sed -i '/ro.product.model=L3 II/c\ro.product.model=E430 (L3 II Single)' system/build.prop ;;
 	"E431") busybox sed -i '/ro.product.model=L3 II/c\ro.product.model=E431 (L3 II Single)' system/build.prop ;;
-	"E435") busybox sed -i '/ro.product.model=L3 II/c\ro.product.model=E435 (L3 II Dual)' system/build.prop ;;
-esac
-
-# Enable DualSim
-case "$deviceset" in
-	"E435")
+	"E435") busybox sed -i '/ro.product.model=L3 II/c\ro.product.model=E435 (L3 II Dual)' system/build.prop
+	# Dual Sim
 	disabledualsim=`getprop persist.disable.dualsim`
 	case "$disabledualsim" in
 		"false" | "")
 		setprop persist.radio.multisim.config dsds
 		setprop persist.multisim.config dsds
 		setprop ro.multi.rild true
-		stop ril-daemon
-		start ril-daemon
-		start ril-daemon1
+		;;
+		"true")
+		setprop persist.radio.multisim.config ""
+		setprop persist.multisim.config ""
+		setprop ro.multi.rild false
 		;;
 	esac
-	;;
-esac
-
-# Change KeyLayouts
-case "$deviceset" in
-	"E425" | "E430" | "E431")
-	# Prevention to Bugs in L3 II Single Devices
-	busybox sed -i '/key 139   HOME              VIRTUAL/c\key 139   MENU              VIRTUAL' system/usr/keylayout/touch_mcs8000.kl
-	busybox sed -i '/key 172   MENU              VIRTUAL/c\key 172   HOME              VIRTUAL' system/usr/keylayout/touch_mcs8000.kl
-	;;
-	"E435")
+	# Key Hack
 	disablekeyhack=`getprop persist.disable.keyhack`
 	case "$disablekeyhack" in
 		"false" | "")
