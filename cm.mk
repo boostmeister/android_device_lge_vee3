@@ -35,4 +35,4 @@ PRODUCT_MODEL := L3 II
 PRODUCT_RELEASE_NAME := L3 II
 
 # Custom UnoOfficial Build Tags
-TARGET_UNOFFICIAL_BUILD_ID := PRC7 # Pre Release Candidade Version 7
+TARGET_UNOFFICIAL_BUILD_ID := PRC7# Pre Release Candidade Version 7
