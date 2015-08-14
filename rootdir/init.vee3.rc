@@ -32,10 +32,3 @@ on init
 
 on fs
     mount_all fstab.vee3
-
-on boot
-    start vee3set
-
-service vee3set /system/bin/sh /init.vee3.sh
-    class late_start
-    oneshot
