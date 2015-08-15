@@ -27,8 +27,5 @@
 #
 import init.vee.rc
 
-on init
-    mkdir /storage/sdext 0700 root root
-
 on fs
     mount_all fstab.vee3
