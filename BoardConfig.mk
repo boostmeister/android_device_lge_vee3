@@ -44,3 +44,11 @@ DEVICE_RESOLUTION := 240x240
 TARGET_RECOVERY_FSTAB := device/lge/vee3/rootdir/fstab.vee3
 #TARGET_RECOVERY_FSTAB := device/lge/vee3/recovery/recovery.fstab
 
+# OTA Assert
+TARGET_OTA_ASSERT_DEVICE := E425,E430,E431,E435,vee3
+
+# Set Device in init based on baseband
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_vee3
+TARGET_LIBINIT_DEFINES_FILE := device/lge/vee3/init/init_vee3.c
+
