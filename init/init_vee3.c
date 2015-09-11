@@ -50,32 +50,24 @@ void vendor_load_properties() {
         property_set("persist.radio.multisim.config", "none");
         property_set("persist.multisim.config", "none");
         property_set("ro.multi.rild", "false");
-        property_set("ro.build.description", "vee3-userdebug 4.4.4 KTU84Q test-keys");
-        property_set("ro.build.fingerprint", "LGE/vee3/vee3:4.4.4/KTU84Q:userdebug/test-keys");
     } else if (strstr(bbversion, "E430")) {
         property_set("ro.product.device", "E430");
         property_set("ro.product.model", "E430 (L3 II Single)");
         property_set("persist.radio.multisim.config", "none");
         property_set("persist.multisim.config", "none");
         property_set("ro.multi.rild", "false");
-        property_set("ro.build.description", "vee3-userdebug 4.4.4 KTU84Q test-keys");
-        property_set("ro.build.fingerprint", "LGE/vee3/vee3:4.4.4/KTU84Q:userdebug/test-keys");
     } else if (strstr(bbversion, "E431")) {
         property_set("ro.product.device", "E431");
         property_set("ro.product.model", "E431 (L3 II Single)");
         property_set("persist.radio.multisim.config", "none");
         property_set("persist.multisim.config", "none");
         property_set("ro.multi.rild", "false");
-        property_set("ro.build.description", "vee3-userdebug 4.4.4 KTU84Q test-keys");
-        property_set("ro.build.fingerprint", "LGE/vee3/vee3:4.4.4/KTU84Q:userdebug/test-keys");
     } else if (strstr(bbversion, "E435")) {
         property_set("ro.product.device", "E435");
         property_set("ro.product.model", "E435 (L3 II Dual)");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.multisim.config", "dsds");
         property_set("ro.multi.rild", "true");
-        property_set("ro.build.description", "vee3-userdebug 4.4.4 KTU84Q test-keys");
-        property_set("ro.build.fingerprint", "LGE/vee3/vee3:4.4.4/KTU84Q:userdebug/test-keys");
     };
 
     property_get("ro.product.device", device);
